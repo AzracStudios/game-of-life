@@ -1,0 +1,103 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.root {
+	overflow: auto;
+	width: 100vw;
+	height: 100vh;
+	outline: 5px solid rgb(190, 190, 190);
+}
+
+.map {
+	display: grid;
+}
+
+.cell {
+	outline: 1px solid rgb(190, 190, 190);
+}
+
+.alive {
+	background: white;
+}
+
+.dead {
+	background: gray;
+}
+
+.controls {
+	position: absolute;
+	bottom: 0px;
+	background: #2c6894;
+	width: 100vw;
+	height: 25vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.simulation {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.look {
+	display: flex;
+	width: 100vw;
+	justify-content: space-between;
+}
+
+.section {
+	width: 23vw;
+	height: 12vh;
+	margin-top: 20px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: red;
+}
+
+.ctrl {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: space-between;
+}
+
+label {
+	color: white;
+	font-size: 19px;
+}
+
+input[type=color] {
+	width: 120px;
+	border: none;
+	background: transparent;
+	border-radius: 20px;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(200, 200, 200);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(100, 100, 100);
+  border-radius: 10px;
+}

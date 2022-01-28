@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cellular Automata</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="app.js" defer type="module"></script>
+</head>
+<body>
+	<div class="root">
+		<div class="map"></div>
+	</div>
+
+	<div class="controls">
+		<div class="simulation">
+			<button class="play">
+				<img src="./assets/play.svg" alt="play">
+			</button>
+			<button class="pause">
+				<img src="./assets/pause.svg" alt="pause">
+			</button>
+			<button class="step">
+				<img src="./assets/step" alt="step">
+			</button>
+		</div>
+		<div class="look">
+			<div class="colors section">
+				<div class="aliveColor ctrl">
+					<label>Alive</label>
+					<input type="color" class="aliveColorInput">
+				</div>
+				<div class="deadColor ctrl">
+					<label>Dead</label>
+					<input type="color" class="deadColorInput">
+				</div>
+				<div class="border ctrl">
+					<label>Grid Border</label>
+					<input type="color" class="gridBorderInput">
+				</div>
+			</div>
+
+			<div class="seperator"></div>
+
+			<div class="mapControls section">
+				<div class="cellResolution ctrl">
+					<label>Resolution</label>
+					<input type="number" class="resolutionInput">
+				</div>
+				<div class="rows ctrl">
+					<label>Rows</label>
+					<input type="number" class="rowsInput">
+				</div>
+				<div class="cols ctrl">
+					<label>Columns</label>
+					<input type="number" class="colsInput">
+				</div>
+			</div>
+
+			<div class="seperator"></div>
+
+			<div class="auto section">
+					<div class="autoResize ctrl">
+						<label>Auto Resize</label>
+						<input type="checkbox" class="autoResize">
+					</div>
+					<div class="lock ctrl">
+						<label>Lock</label>
+						<select>
+							<option value="select">Select...</option>
+							<option value="cell">Cell Resolution</option>
+							<option value="cols">Columns</option>
+							<option value="rows">Rows</option>
+							<option value="both">Rows and Columns</option>
+						</select>
+					</div>
+					<button class="fit">Fit Screen</button>
+			</div>
+
+			<div class="seperator"></div>
+
+			<div class="file section">
+				<input type="text" class="boardName" placeholder="Name...">
+				<button class="save">Save Board</button>
+				<button class="load">Load Board</button>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>
