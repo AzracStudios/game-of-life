@@ -1,103 +1,156 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+  color: white;
 }
 
 body {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	overflow: hidden;
+  background-color: #333;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.root {
-	overflow: auto;
-	width: 100vw;
-	height: 100vh;
-	outline: 5px solid rgb(190, 190, 190);
-}
-
-.map {
-	display: grid;
-}
-
-.cell {
-	outline: 1px solid rgb(190, 190, 190);
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .alive {
-	background: white;
+  width: 20px;
+  height: 20px;
+  background: #b4b4b4;
+  border-radius: 2px;
+  border: 2px solid #3c3c3c;
 }
 
 .dead {
-	background: gray;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 2px;
+  border: 2px solid #3c3c3c;
 }
 
-.controls {
-	position: absolute;
-	bottom: 0px;
-	background: #2c6894;
-	width: 100vw;
-	height: 25vh;
-	display: flex;
-	flex-direction: column;
+.cell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
 }
 
-.simulation {
-	width: 100vw;
-	display: flex;
-	justify-content: center;
-	gap: 10px;
+.ctrls {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 60px;
+  background-color: #252525;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.look {
-	display: flex;
-	width: 100vw;
-	justify-content: space-between;
+.ctrls .clickable {
+  cursor: pointer;
+  background-color: rgba(108, 108, 108, 0.15);
+  padding: 7px 10px;
+  border-radius: 7px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
-.section {
-	width: 23vw;
-	height: 12vh;
-	margin-top: 20px;
-	padding: 10px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	background: red;
+.ctrls .clickable:hover {
+  background-color: rgba(108, 108, 108, 0.25);
 }
 
-.ctrl {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-content: space-between;
+.ctrls .arr-size,
+.ctrls .sim-speed {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
 }
 
-label {
-	color: white;
-	font-size: 19px;
+.ctrls .arr-size input[type="text"],
+.ctrls .sim-speed input[type="text"] {
+  width: 75px;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: #363636;
+  color: white;
+  padding: 5px;
 }
 
-input[type=color] {
-	width: 120px;
-	border: none;
-	background: transparent;
-	border-radius: 20px;
+.ctrls .iseperator {
+  width: 15px;
 }
 
-/* SCROLLBAR */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+.ctrls .algorithms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 30px;
 }
 
-::-webkit-scrollbar-track {
-  background: rgb(200, 200, 200);
+.ctrls .algorithms * {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  cursor: pointer;
 }
 
-::-webkit-scrollbar-thumb {
-  background: rgb(100, 100, 100);
+.ctrls .algorithms .selected {
+  color: white;
+}
+
+.ctrls .algorithms .deselected {
+  color: #aeaeae;
+}
+
+.ctrls .algorithms .deselected:hover {
+  color: #cfcfcf;
+}
+
+.ctrls .seperator {
+  margin: 0px 20px 0px 20px;
+  width: 3px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.295);
   border-radius: 10px;
 }
+/*# sourceMappingURL=style.css.map */

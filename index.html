@@ -3,89 +3,47 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cellular Automata</title>
-	<link rel="stylesheet" href="style.css">
-	<script src="app.js" defer type="module"></script>
+	<title>Conway's Game Of Life</title>
+	<link rel="stylesheet" href="src/style.css">
+	<script src="src/app.js" defer type="module"></script>
+	<style></style>
 </head>
 <body>
-	<div class="root">
-		<div class="map"></div>
+	<div class="ctrls">
+		<img class="play noselect clickable" src="/assets/play.svg"></img>
+		<div class="iseperator"></div>
+		<img class="pause noselect clickable" src="/assets/pause.svg"></img>
+		<div class="iseperator"></div>
+		<img class="step noselect clickable" src="/assets/step.svg"></img>
+		<div class="iseperator"></div>
+		<p class="reset noselect clickable">Reset</p>
+		<div class="iseperator"></div>
+		<p class="randomize clickable noselect">Randomize</p>
+
+		<div class="seperator"></div>
+
+		<p class="time">Time: 0</p>
+		<div class="iseperator"></div>
+		<p class="population">Population: 0</p>
+
+		<div class="seperator"></div>
+
+		<div class="cell">
+			<div class="alive"></div>
+			<p class="noselect">Alive</p>
+		</div>
+		<div class="iseperator"></div>
+		<div class="cell">
+			<div class="dead"></div>
+			<p class="noselect">Dead</p>
+		</div>
+
+		<div class="seperator"></div>
+		
+		<p class="noselect">By <a class="noselect" href="https://github.com/AzracStudios/">@AzracStudios</a></p>
 	</div>
-
-	<div class="controls">
-		<div class="simulation">
-			<button class="play">
-				<img src="./assets/play.svg" alt="play">
-			</button>
-			<button class="pause">
-				<img src="./assets/pause.svg" alt="pause">
-			</button>
-			<button class="step">
-				<img src="./assets/step" alt="step">
-			</button>
-		</div>
-		<div class="look">
-			<div class="colors section">
-				<div class="aliveColor ctrl">
-					<label>Alive</label>
-					<input type="color" class="aliveColorInput">
-				</div>
-				<div class="deadColor ctrl">
-					<label>Dead</label>
-					<input type="color" class="deadColorInput">
-				</div>
-				<div class="border ctrl">
-					<label>Grid Border</label>
-					<input type="color" class="gridBorderInput">
-				</div>
-			</div>
-
-			<div class="seperator"></div>
-
-			<div class="mapControls section">
-				<div class="cellResolution ctrl">
-					<label>Resolution</label>
-					<input type="number" class="resolutionInput">
-				</div>
-				<div class="rows ctrl">
-					<label>Rows</label>
-					<input type="number" class="rowsInput">
-				</div>
-				<div class="cols ctrl">
-					<label>Columns</label>
-					<input type="number" class="colsInput">
-				</div>
-			</div>
-
-			<div class="seperator"></div>
-
-			<div class="auto section">
-					<div class="autoResize ctrl">
-						<label>Auto Resize</label>
-						<input type="checkbox" class="autoResize">
-					</div>
-					<div class="lock ctrl">
-						<label>Lock</label>
-						<select>
-							<option value="select">Select...</option>
-							<option value="cell">Cell Resolution</option>
-							<option value="cols">Columns</option>
-							<option value="rows">Rows</option>
-							<option value="both">Rows and Columns</option>
-						</select>
-					</div>
-					<button class="fit">Fit Screen</button>
-			</div>
-
-			<div class="seperator"></div>
-
-			<div class="file section">
-				<input type="text" class="boardName" placeholder="Name...">
-				<button class="save">Save Board</button>
-				<button class="load">Load Board</button>
-			</div>
-
-		</div>
+	<div class="root">
+		<canvas class="map"></canvas>
 	</div>
 </body>
 </html>
